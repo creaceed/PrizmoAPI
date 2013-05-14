@@ -1,6 +1,6 @@
 # PrizmoAPI
 
-Prizmo offers its OCR and Text-to-speech capabilities to other apps through a custom URL scheme. Moreover, this custom URL scheme is compliant to the [x-callback-url](http://x-callback-url.com) protocol.
+[Prizmo](http://www.creaceed.com/iprizmo/about) offers its OCR and Text-to-speech capabilities to other apps through a custom URL scheme. Moreover, this custom URL scheme is compliant to the [x-callback-url](http://x-callback-url.com) protocol.
 
 Prizmo's x-callback-url API can be used directly (no need of this PrizmoAPI Objective-C SDK) with standard x-callback-url invocations. But an Objective-C API is also provided to make it easier to integrate the features in an app if needed.
 
