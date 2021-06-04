@@ -10,14 +10,19 @@ Prizmo document processing can be invoked from other apps either from provided i
 
 **prizmo://x-callback-url/processDocument?language=en&destination=pasteboard**
 
-This will start Prizmo to take a picture and perform English OCR on it. The following options are supported:
+This will start Prizmo to take a picture and perform English OCR on it.
+
+[Discover the API directly in Apple Shortcuts app](https://www.icloud.com/shortcuts/0a2bb10bcd7e47029ecb36d3675bd30c)
+
+The following options are supported:
 
 - **input** (optional): the input can be provided in multiple ways.
 	- `camera` (default): will shoot directly in Prizmo.
 	- `clipboard`: will import the image that has been copied to the clipboard.
-	- `data`: will import the image provided as paramter (see `imageData`).
-- **imageData** (optional): Base64 encoded image data that is provided as part of the URL (base64 data stream must be URL encoded). Image format can be any format supported by iOS (see `imageFormat`). This parameter is required if `input` is `data`.
+	- `data`: will import the document provided as parameter (requires `imageData` or `pdfData` parameter).
+- **imageData** (optional): Base64 encoded image data that is provided as part of the URL (base64 data stream must be URL encoded). Image format can be any format supported by iOS (see `imageFormat`).
 - **imageFormat** (optional): format of `imageData`, expressed as a file extension (ex: 'jpeg'). The is a hint to help disambiguate actual format in some situations.
+- **pdfData** (optional): Base64 encoded PDF data that is provided as part of the URL (base64 data stream must be URL encoded).
 - **ocr** (optional): the OCR to use to recognize text. If no value is provided, Prizmo will use the one previously set by the user.
 	- `none`: do not perform any text recognition. Can be used for instance to export cleaned-up images only.
 	- `en`, `fr`, `de`, etc.: use on-device OCR by specifying the ISO 639-1 language code. The language must have been previously installed by the user. List of supported language codes for the on-device recognizer: `ar` (Arabic), `cs` (Czech), `da` (Danish), `de` (German), `el` (Greek), `en` (English), `es` (Spanish), `fi` (Finnish), `fr` (French),`he` (Hebrew), `hu` (Hungarian), `it` (Italian), `ja` (Japanese), `ko` (Korean), `nb` (Norwegian Bokmål), `nl` (Dutch), `pl` (Polish), `pt` (Portuguese), `ro` (Romanian), `ru` (Russian), `sk` (Slovak), `sr-Latn` (Serbian (Latin)), `sr` (Serbian (Cyrillic)), `sv` (Swedish), `tr` (Turkish), `uk` (Ukrainian), `zh-hans` (Simplified Chinese), `zh-hant` (Traditional Chinese).
@@ -40,8 +45,6 @@ The following parameters from Prizmo 4 should be updated:
 - **textParameterName**: deprecated, use `callbackTextParameter` instead.
 - **pasteboardName**: not available anymore (iOS 10 removed support for persistent named pasteboard)
 - **cropMode**: not available anymore, see `detectPage`.
-
-
 
 # Reading Text
 
