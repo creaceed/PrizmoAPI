@@ -12,7 +12,7 @@ Prizmo document processing can be invoked from other apps either from provided i
 
 This will start Prizmo to take a picture and perform English OCR on it.
 
-[Discover the API directly in Apple Shortcuts app](https://www.icloud.com/shortcuts/0a2bb10bcd7e47029ecb36d3675bd30c)
+[Discover the API directly in Apple Shortcuts app](https://www.icloud.com/shortcuts/5b1a4bdae74a4d6dab27f0ba1580463a)
 
 The following options are supported:
 
